@@ -12,188 +12,154 @@ namespace WpfApplication1
 {
     public partial class IncrementWindow : Form
     {
-        MainWindow mw = null;
-        int temp;
+        MainWindow mw;
 
-        public IncrementWindow(MainWindow mw)
+        public IncrementWindow(MainWindow _mw)
         {
             InitializeComponent();
-            this.mw = mw;
+            mw = _mw;
 		}
 
 		private void plusGB_Click(object sender, EventArgs e)
 		{
-            temp = this.mw.GB;
-            if(temp < 201)
+            if (mw.GB < 201)
             {
-			    temp++;
-			    this.mw.ValueGB(temp);
-			    this.mw.Load();
+				mw.GB++;
+			    mw.Load();
 			}
 		}
 
         private void minusGB_Click(object sender, EventArgs e)
         {
-            temp = this.mw.GB;
-            if (temp > 0)
+            if (mw.GB > 0)
             {
-                temp--;
-                this.mw.ValueGB(temp);
-                this.mw.Load();
+                mw.GB--;
+                mw.Load();
             }
         }
 
         private void plusBlueprint_Click(object sender, EventArgs e)
         {
-            temp = this.mw.BP;
-            if (temp < 40)
+            if (mw.BP < 40)
             {
-                temp++;
-                this.mw.ValueBP(temp);
-                this.mw.Load();
+				mw.BP++;
+                mw.Load();
             }
         }
 
         private void minusBlueprint_Click(object sender, EventArgs e)
         {
-            temp = this.mw.BP;
-            if (temp > 0)
+            if (mw.BP > 0)
             {
-                temp--;
-                this.mw.ValueBP(temp);
-                this.mw.Load();
+                mw.BP--;
+                mw.Load();
             }
         }
 
         private void plusMedal_Click(object sender, EventArgs e)
         {
-            temp = this.mw.Medal;
-            if (temp < 40)
+            if (mw.Medal < 40)
             {
-                temp++;
-                this.mw.ValueMedal(temp);
-                this.mw.Load();
+				mw.Medal++;
+                mw.Load();
             }
         }
 
         private void minusMedal_Click(object sender, EventArgs e)
         {
-            temp = this.mw.Medal;
-            if (temp > 0)
+            if (mw.Medal > 0)
             {
-                temp--;
-                this.mw.ValueMedal(temp);
-                this.mw.Load();
+				mw.Medal--;
+                mw.Load();
             }
         }
 
         private void plusFairy_Click(object sender, EventArgs e)
         {
-            temp = this.mw.Fairy;
-            if (temp < 20)
+            if (mw.Fairy < 20)
             {
-                temp++;
-                this.mw.ValueFairy(temp);
-                this.mw.Load();
+                mw.Fairy++;
+                mw.Load();
             }
         }
 
         private void minusFairy_Click(object sender, EventArgs e)
         {
-            temp = this.mw.Fairy;
-            if (temp > 0)
-            {
-                temp--;
-                this.mw.ValueFairy(temp);
-                this.mw.Load();
-            }
+			if (mw.Fairy > 0) {
+				mw.Fairy--;
+				mw.Load();
+			}
         }
 
         private void plusCrown_Click(object sender, EventArgs e)
         {
-            temp = this.mw.Crown;
-            if (temp < 10)
+            if (mw.Crown < 10)
             {
-                temp++;
-                this.mw.ValueCrown(temp);
-                this.mw.Load();
+				mw.Crown++;
+                mw.Load();
             }
         }
 
         private void minusCrown_Click(object sender, EventArgs e)
         {
-            temp = this.mw.Crown;
-            if (temp > 0)
+            if (mw.Crown > 0)
             {
-                temp--;
-                this.mw.ValueCrown(temp);
-                this.mw.Load();
+                mw.Crown--;
+                mw.Load();
             }
         }
 
         private void plusKey_Click(object sender, EventArgs e)
         {
-            temp = this.mw.BossKey;
-            if (temp < 8)
+            if (mw.BossKey < 8)
             {
-                temp++;
-                this.mw.ValueKey(temp);
-                this.mw.Load();
+				mw.BossKey++;
+                mw.Load();
             }
         }
 
         private void minusKey_Click(object sender, EventArgs e)
         {
-            temp = this.mw.BossKey;
-            if (temp > 0)
+            if (mw.BossKey > 0)
             {
-                temp--;
-                this.mw.ValueKey(temp);
-                this.mw.Load();
+				mw.BossKey--;
+                mw.Load();
             }
         }
 
         private void plusN64Coin_Click(object sender, EventArgs e)
         {
-            temp = this.mw.N64Coin;
-            if (temp < 1)
+            if (mw.N64Coin < 1)
             {
-                temp++;
-                this.mw.ValueN64Coin(temp);
-                this.mw.Load();
+                mw.N64Coin++;
+                mw.Load();
             }
         }
 
         private void minusN64Coin_Click(object sender, EventArgs e)
         {
-            temp = this.mw.N64Coin;
-            if (temp > 0)
+            if (mw.N64Coin > 0)
             {
-                temp--;
-                this.mw.ValueN64Coin(temp);
-                this.mw.Load();
+				mw.N64Coin--;
+                mw.Load();
             }
         }
 
         private void plusRWCoin_Click(object sender, EventArgs e)
         {
-            temp = this.mw.RWCoin;
-            if (temp < 1)
+            if (mw.RWCoin < 1)
             {
-                temp++;
-                this.mw.ValueRWCoin(temp);
-                this.mw.Load();
+				mw.RWCoin++;
+                mw.Load();
             }
         }
 
         private void minusRWCoin_Click(object sender, EventArgs e)
         {
-            temp = this.mw.RWCoin;
-            if (temp > 0)
+            if (mw.RWCoin > 0)
             {
-                temp--;
-                this.mw.ValueRWCoin(temp);
-                this.mw.Load();
+				mw.RWCoin--;
+                mw.Load();
             }
         }
     }

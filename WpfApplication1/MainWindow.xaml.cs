@@ -82,45 +82,5 @@ namespace WpfApplication1
                 Percentage = 101;
             }
         }
-
-        public void ValueGB(int nG)
-        {
-            GB = nG;
-        }
-
-        public void ValueBP(int nB)
-        {
-            BP = nB;
-        }
-
-        public void ValueMedal(int nM)
-        {
-            Medal = nM;
-        }
-
-        public void ValueFairy(int nF)
-        {
-            Fairy = nF;
-        }
-
-        public void ValueCrown(int nC)
-        {
-            Crown = nC;
-        }
-
-        public void ValueKey(int nK)
-        {
-            BossKey = nK;
-        }
-
-        public void ValueN64Coin(int nN)
-        {
-            N64Coin = nN;
-        }
-
-        public void ValueRWCoin(int nR)
-        {
-            RWCoin = nR;
-        }
     }
 }
