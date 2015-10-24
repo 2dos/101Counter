@@ -34,9 +34,20 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+			IncrementWindow iw = new IncrementWindow(this);
+			iw.Show();
+			iw.BringToFront();
         }
 
-        public void Load()
+		private void CalcPercent() {
+			actualPercent = Convert.ToDecimal((GB * 0.4) + (Medal * 0.2) + (Fairy * 0.2) + (Crown * 0.5) + (BossKey * 0.25) + (N64Coin * 0.5) + (RWCoin * 0.5));
+			Percentage = Decimal.ToInt32(actualPercent);
+			if (actualPercent.Equals(100.4m)) {
+				Percentage = 101;
+			}
+		}
+
+        public void RefreshUI()
         {
             numGB.Text = GB.ToString();
             numBP.Text = BP.ToString();
@@ -49,6 +60,20 @@ namespace WpfApplication1
             CalcPercent();
             numPercent.Text = Percentage.ToString();
         }
+
+		public void Reset() {
+			GB = 0;
+			BP = 0;
+			Medal = 0;
+			Fairy = 0;
+			Crown = 0;
+			BossKey = 0;
+			N64Coin = 0;
+			RWCoin = 0;
+			Percentage = 0;
+			actualPercent = 0;
+			RefreshUI();
+		}
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
@@ -73,14 +98,6 @@ namespace WpfApplication1
             Application.Current.Shutdown();
         }
 
-        private void CalcPercent()
-        {
-            actualPercent = Convert.ToDecimal((GB * 0.4) + (Medal * 0.2) + (Fairy * 0.2) + (Crown * 0.5) + (BossKey * 0.25) + (N64Coin * 0.5) + (RWCoin * 0.5));
-            Percentage = Decimal.ToInt32(actualPercent);
-            if (actualPercent.Equals(100.4m))
-            {
-                Percentage = 101;
-            }
-        }
+
     }
 }

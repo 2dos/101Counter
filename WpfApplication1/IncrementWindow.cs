@@ -25,7 +25,7 @@ namespace WpfApplication1
             if (mw.GB < 201)
             {
 				mw.GB++;
-			    mw.Load();
+			    mw.RefreshUI();
 			}
 		}
 
@@ -34,7 +34,7 @@ namespace WpfApplication1
             if (mw.GB > 0)
             {
                 mw.GB--;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -43,7 +43,7 @@ namespace WpfApplication1
             if (mw.BP < 40)
             {
 				mw.BP++;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -52,7 +52,7 @@ namespace WpfApplication1
             if (mw.BP > 0)
             {
                 mw.BP--;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -61,7 +61,7 @@ namespace WpfApplication1
             if (mw.Medal < 40)
             {
 				mw.Medal++;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -70,7 +70,7 @@ namespace WpfApplication1
             if (mw.Medal > 0)
             {
 				mw.Medal--;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -79,7 +79,7 @@ namespace WpfApplication1
             if (mw.Fairy < 20)
             {
                 mw.Fairy++;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -87,7 +87,7 @@ namespace WpfApplication1
         {
 			if (mw.Fairy > 0) {
 				mw.Fairy--;
-				mw.Load();
+				mw.RefreshUI();
 			}
         }
 
@@ -96,7 +96,7 @@ namespace WpfApplication1
             if (mw.Crown < 10)
             {
 				mw.Crown++;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -105,7 +105,7 @@ namespace WpfApplication1
             if (mw.Crown > 0)
             {
                 mw.Crown--;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -114,7 +114,7 @@ namespace WpfApplication1
             if (mw.BossKey < 8)
             {
 				mw.BossKey++;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -123,7 +123,7 @@ namespace WpfApplication1
             if (mw.BossKey > 0)
             {
 				mw.BossKey--;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -132,7 +132,7 @@ namespace WpfApplication1
             if (mw.N64Coin < 1)
             {
                 mw.N64Coin++;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -141,7 +141,7 @@ namespace WpfApplication1
             if (mw.N64Coin > 0)
             {
 				mw.N64Coin--;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -150,7 +150,7 @@ namespace WpfApplication1
             if (mw.RWCoin < 1)
             {
 				mw.RWCoin++;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
 
@@ -159,8 +159,12 @@ namespace WpfApplication1
             if (mw.RWCoin > 0)
             {
 				mw.RWCoin--;
-                mw.Load();
+                mw.RefreshUI();
             }
         }
+
+		private void resetButton_Click(object sender, EventArgs e) {
+			mw.Reset();
+		}
     }
 }

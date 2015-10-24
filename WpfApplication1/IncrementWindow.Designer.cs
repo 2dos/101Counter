@@ -53,6 +53,7 @@
 			this.pictureBox8 = new System.Windows.Forms.PictureBox();
 			this.minusBlueprint = new System.Windows.Forms.Button();
 			this.plusBlueprint = new System.Windows.Forms.Button();
+			this.resetButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -317,11 +318,23 @@
 			this.plusBlueprint.UseVisualStyleBackColor = true;
 			this.plusBlueprint.Click += new System.EventHandler(this.plusBlueprint_Click);
 			// 
+			// resetButton
+			// 
+			this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.resetButton.Location = new System.Drawing.Point(12, 403);
+			this.resetButton.Name = "resetButton";
+			this.resetButton.Size = new System.Drawing.Size(135, 43);
+			this.resetButton.TabIndex = 32;
+			this.resetButton.Text = "Reset";
+			this.resetButton.UseVisualStyleBackColor = true;
+			this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+			// 
 			// IncrementWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(159, 408);
+			this.ClientSize = new System.Drawing.Size(159, 457);
+			this.Controls.Add(this.resetButton);
 			this.Controls.Add(this.plusBlueprint);
 			this.Controls.Add(this.minusBlueprint);
 			this.Controls.Add(this.pictureBox8);
@@ -386,6 +399,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button minusBlueprint;
         private System.Windows.Forms.Button plusBlueprint;
+		private System.Windows.Forms.Button resetButton;
 
 
     }
