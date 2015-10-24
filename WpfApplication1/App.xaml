@@ -3,6 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
-    </Application.Resources>
+		<BitmapImage x:Key="Blueprint" UriSource="Images\Blueprint.png" />
+		<BitmapImage x:Key="Crown" UriSource="Images\Crown.png" />
+		<BitmapImage x:Key="Fairy" UriSource="Images\Fairy.png" />
+		<BitmapImage x:Key="GB" UriSource="Images\GB.png" />
+		<BitmapImage x:Key="Key" UriSource="Images\Key.png" />
+		<BitmapImage x:Key="Medal" UriSource="Images\Medal.png" />
+		<BitmapImage x:Key="N64Coin" UriSource="Images\N64Coin.png" />
+		<BitmapImage x:Key="N64Coin_greyed" UriSource="Images\N64Coin_greyed.png" />
+		<BitmapImage x:Key="RarewareCoin" UriSource="Images\RarewareCoin.png" />
+		<BitmapImage x:Key="RarewareCoin_greyed" UriSource="Images\RarewareCoin_greyed.png" />
+	</Application.Resources>
 </Application>

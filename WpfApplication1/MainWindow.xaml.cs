@@ -55,8 +55,8 @@ namespace WpfApplication1
             numFairy.Text = Fairy.ToString();
             numCrown.Text = Crown.ToString();
             numKey.Text = BossKey.ToString();
-            numN64Coin.Text = N64Coin.ToString();
-            numRWCoin.Text = RWCoin.ToString();
+			n64CoinImage.Source = (ImageSource) (N64Coin == 1 ? FindResource("N64Coin") : FindResource("N64Coin_greyed"));
+			rwCoinImage.Source = (ImageSource) (RWCoin == 1 ? FindResource("RarewareCoin") : FindResource("RarewareCoin_greyed"));
             CalcPercent();
             numPercent.Text = Percentage.ToString();
         }
