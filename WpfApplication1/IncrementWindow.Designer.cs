@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IncrementWindow));
 			this.minusGB = new System.Windows.Forms.Button();
 			this.plusGB = new System.Windows.Forms.Button();
@@ -36,31 +37,27 @@
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
-			this.pictureBox6 = new System.Windows.Forms.PictureBox();
-			this.pictureBox7 = new System.Windows.Forms.PictureBox();
 			this.minusMedal = new System.Windows.Forms.Button();
 			this.plusMedal = new System.Windows.Forms.Button();
 			this.minusFairy = new System.Windows.Forms.Button();
 			this.minusCrown = new System.Windows.Forms.Button();
 			this.minusKey = new System.Windows.Forms.Button();
-			this.minusN64Coin = new System.Windows.Forms.Button();
-			this.minusRWCoin = new System.Windows.Forms.Button();
 			this.plusFairy = new System.Windows.Forms.Button();
 			this.plusCrown = new System.Windows.Forms.Button();
 			this.plusKey = new System.Windows.Forms.Button();
-			this.plusN64Coin = new System.Windows.Forms.Button();
-			this.plusRWCoin = new System.Windows.Forms.Button();
 			this.pictureBox8 = new System.Windows.Forms.PictureBox();
 			this.minusBlueprint = new System.Windows.Forms.Button();
 			this.plusBlueprint = new System.Windows.Forms.Button();
 			this.resetButton = new System.Windows.Forms.Button();
+			this.btnToggleN64Coin = new System.Windows.Forms.Button();
+			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+			this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+			this.btnToggleRWCoin = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -136,24 +133,6 @@
 			this.pictureBox5.TabIndex = 7;
 			this.pictureBox5.TabStop = false;
 			// 
-			// pictureBox6
-			// 
-			this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-			this.pictureBox6.Location = new System.Drawing.Point(12, 305);
-			this.pictureBox6.Name = "pictureBox6";
-			this.pictureBox6.Size = new System.Drawing.Size(37, 43);
-			this.pictureBox6.TabIndex = 8;
-			this.pictureBox6.TabStop = false;
-			// 
-			// pictureBox7
-			// 
-			this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-			this.pictureBox7.Location = new System.Drawing.Point(12, 354);
-			this.pictureBox7.Name = "pictureBox7";
-			this.pictureBox7.Size = new System.Drawing.Size(37, 43);
-			this.pictureBox7.TabIndex = 9;
-			this.pictureBox7.TabStop = false;
-			// 
 			// minusMedal
 			// 
 			this.minusMedal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,28 +188,6 @@
 			this.minusKey.UseVisualStyleBackColor = true;
 			this.minusKey.Click += new System.EventHandler(this.minusKey_Click);
 			// 
-			// minusN64Coin
-			// 
-			this.minusN64Coin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.minusN64Coin.Location = new System.Drawing.Point(55, 305);
-			this.minusN64Coin.Name = "minusN64Coin";
-			this.minusN64Coin.Size = new System.Drawing.Size(43, 43);
-			this.minusN64Coin.TabIndex = 16;
-			this.minusN64Coin.Text = "-";
-			this.minusN64Coin.UseVisualStyleBackColor = true;
-			this.minusN64Coin.Click += new System.EventHandler(this.minusN64Coin_Click);
-			// 
-			// minusRWCoin
-			// 
-			this.minusRWCoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.minusRWCoin.Location = new System.Drawing.Point(55, 354);
-			this.minusRWCoin.Name = "minusRWCoin";
-			this.minusRWCoin.Size = new System.Drawing.Size(43, 43);
-			this.minusRWCoin.TabIndex = 17;
-			this.minusRWCoin.Text = "-";
-			this.minusRWCoin.UseVisualStyleBackColor = true;
-			this.minusRWCoin.Click += new System.EventHandler(this.minusRWCoin_Click);
-			// 
 			// plusFairy
 			// 
 			this.plusFairy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,28 +220,6 @@
 			this.plusKey.Text = "+";
 			this.plusKey.UseVisualStyleBackColor = true;
 			this.plusKey.Click += new System.EventHandler(this.plusKey_Click);
-			// 
-			// plusN64Coin
-			// 
-			this.plusN64Coin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.plusN64Coin.Location = new System.Drawing.Point(104, 305);
-			this.plusN64Coin.Name = "plusN64Coin";
-			this.plusN64Coin.Size = new System.Drawing.Size(43, 43);
-			this.plusN64Coin.TabIndex = 26;
-			this.plusN64Coin.Text = "+";
-			this.plusN64Coin.UseVisualStyleBackColor = true;
-			this.plusN64Coin.Click += new System.EventHandler(this.plusN64Coin_Click);
-			// 
-			// plusRWCoin
-			// 
-			this.plusRWCoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.plusRWCoin.Location = new System.Drawing.Point(104, 354);
-			this.plusRWCoin.Name = "plusRWCoin";
-			this.plusRWCoin.Size = new System.Drawing.Size(43, 43);
-			this.plusRWCoin.TabIndex = 27;
-			this.plusRWCoin.Text = "+";
-			this.plusRWCoin.UseVisualStyleBackColor = true;
-			this.plusRWCoin.Click += new System.EventHandler(this.plusRWCoin_Click);
 			// 
 			// pictureBox8
 			// 
@@ -321,7 +256,7 @@
 			// resetButton
 			// 
 			this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.resetButton.Location = new System.Drawing.Point(12, 403);
+			this.resetButton.Location = new System.Drawing.Point(12, 354);
 			this.resetButton.Name = "resetButton";
 			this.resetButton.Size = new System.Drawing.Size(135, 43);
 			this.resetButton.TabIndex = 32;
@@ -329,29 +264,67 @@
 			this.resetButton.UseVisualStyleBackColor = true;
 			this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
 			// 
+			// btnToggleN64Coin
+			// 
+			this.btnToggleN64Coin.FlatAppearance.BorderSize = 0;
+			this.btnToggleN64Coin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnToggleN64Coin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnToggleN64Coin.ImageIndex = 0;
+			this.btnToggleN64Coin.ImageList = this.imageList1;
+			this.btnToggleN64Coin.Location = new System.Drawing.Point(55, 305);
+			this.btnToggleN64Coin.Name = "btnToggleN64Coin";
+			this.btnToggleN64Coin.Size = new System.Drawing.Size(43, 43);
+			this.btnToggleN64Coin.TabIndex = 33;
+			this.btnToggleN64Coin.UseVisualStyleBackColor = true;
+			this.btnToggleN64Coin.Click += new System.EventHandler(this.btnToggleN64Coin_Click);
+			// 
+			// imageList1
+			// 
+			this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+			this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageList1.Images.SetKeyName(0, "N64Coin_greyed.png");
+			this.imageList1.Images.SetKeyName(1, "N64Coin.png");
+			// 
+			// imageList2
+			// 
+			this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+			this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageList2.Images.SetKeyName(0, "RarewareCoin_greyed.png");
+			this.imageList2.Images.SetKeyName(1, "RarewareCoin.png");
+			// 
+			// btnToggleRWCoin
+			// 
+			this.btnToggleRWCoin.FlatAppearance.BorderSize = 0;
+			this.btnToggleRWCoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnToggleRWCoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnToggleRWCoin.ImageIndex = 0;
+			this.btnToggleRWCoin.ImageList = this.imageList2;
+			this.btnToggleRWCoin.Location = new System.Drawing.Point(104, 305);
+			this.btnToggleRWCoin.Name = "btnToggleRWCoin";
+			this.btnToggleRWCoin.Size = new System.Drawing.Size(43, 43);
+			this.btnToggleRWCoin.TabIndex = 34;
+			this.btnToggleRWCoin.UseVisualStyleBackColor = true;
+			this.btnToggleRWCoin.Click += new System.EventHandler(this.btnToggleRWCoin_Click);
+			// 
 			// IncrementWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(159, 457);
+			this.ClientSize = new System.Drawing.Size(159, 409);
+			this.Controls.Add(this.btnToggleRWCoin);
+			this.Controls.Add(this.btnToggleN64Coin);
 			this.Controls.Add(this.resetButton);
 			this.Controls.Add(this.plusBlueprint);
 			this.Controls.Add(this.minusBlueprint);
 			this.Controls.Add(this.pictureBox8);
-			this.Controls.Add(this.plusRWCoin);
-			this.Controls.Add(this.plusN64Coin);
 			this.Controls.Add(this.plusKey);
 			this.Controls.Add(this.plusCrown);
 			this.Controls.Add(this.plusFairy);
-			this.Controls.Add(this.minusRWCoin);
-			this.Controls.Add(this.minusN64Coin);
 			this.Controls.Add(this.minusKey);
 			this.Controls.Add(this.minusCrown);
 			this.Controls.Add(this.minusFairy);
 			this.Controls.Add(this.plusMedal);
 			this.Controls.Add(this.minusMedal);
-			this.Controls.Add(this.pictureBox7);
-			this.Controls.Add(this.pictureBox6);
 			this.Controls.Add(this.pictureBox5);
 			this.Controls.Add(this.pictureBox4);
 			this.Controls.Add(this.pictureBox3);
@@ -366,8 +339,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
 			this.ResumeLayout(false);
 
@@ -381,25 +352,23 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button minusMedal;
         private System.Windows.Forms.Button plusMedal;
         private System.Windows.Forms.Button minusFairy;
         private System.Windows.Forms.Button minusCrown;
-        private System.Windows.Forms.Button minusKey;
-        private System.Windows.Forms.Button minusN64Coin;
-        private System.Windows.Forms.Button minusRWCoin;
+		private System.Windows.Forms.Button minusKey;
         private System.Windows.Forms.Button plusFairy;
         private System.Windows.Forms.Button plusCrown;
-        private System.Windows.Forms.Button plusKey;
-        private System.Windows.Forms.Button plusN64Coin;
-        private System.Windows.Forms.Button plusRWCoin;
+		private System.Windows.Forms.Button plusKey;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button minusBlueprint;
         private System.Windows.Forms.Button plusBlueprint;
 		private System.Windows.Forms.Button resetButton;
+		private System.Windows.Forms.Button btnToggleN64Coin;
+		private System.Windows.Forms.ImageList imageList1;
+		private System.Windows.Forms.ImageList imageList2;
+		private System.Windows.Forms.Button btnToggleRWCoin;
 
 
     }

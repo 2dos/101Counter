@@ -18,6 +18,9 @@ namespace WpfApplication1
         {
             InitializeComponent();
             mw = _mw;
+			
+			btnToggleRWCoin.ImageIndex = mw.RWCoin;
+			btnToggleN64Coin.ImageIndex = mw.N64Coin;
 		}
 
 		private void plusGB_Click(object sender, EventArgs e)
@@ -165,6 +168,30 @@ namespace WpfApplication1
 
 		private void resetButton_Click(object sender, EventArgs e) {
 			mw.Reset();
+			btnToggleRWCoin.ImageIndex = mw.RWCoin;
+			btnToggleN64Coin.ImageIndex = mw.N64Coin;
+		}
+
+		private void btnToggleN64Coin_Click(object sender, EventArgs e) {
+			if (mw.N64Coin == 0) {
+				mw.N64Coin = 1;
+			}
+			else {
+				mw.N64Coin = 0;
+			}
+			btnToggleN64Coin.ImageIndex = mw.N64Coin;
+			mw.RefreshUI();
+		}
+
+		private void btnToggleRWCoin_Click(object sender, EventArgs e) {
+			if (mw.RWCoin == 0) {
+				mw.RWCoin = 1;
+			}
+			else {
+				mw.RWCoin = 0;
+			}
+			btnToggleRWCoin.ImageIndex = mw.RWCoin;
+			mw.RefreshUI();
 		}
     }
 }
