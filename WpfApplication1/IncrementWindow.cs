@@ -25,7 +25,7 @@ namespace WpfApplication1
 
 		private void plusGB_Click(object sender, EventArgs e)
 		{
-            if (mw.GB < 201)
+            if (mw.GB < mw.Max_GB)
             {
 				mw.GB++;
 			    mw.RefreshUI();
@@ -43,7 +43,7 @@ namespace WpfApplication1
 
         private void plusBlueprint_Click(object sender, EventArgs e)
         {
-            if (mw.BP < 40)
+            if (mw.BP < mw.Max_BP)
             {
 				mw.BP++;
                 mw.RefreshUI();
@@ -61,7 +61,7 @@ namespace WpfApplication1
 
         private void plusMedal_Click(object sender, EventArgs e)
         {
-            if (mw.Medal < 40)
+            if (mw.Medal < mw.Max_Medal)
             {
 				mw.Medal++;
                 mw.RefreshUI();
@@ -79,7 +79,7 @@ namespace WpfApplication1
 
         private void plusFairy_Click(object sender, EventArgs e)
         {
-            if (mw.Fairy < 20)
+            if (mw.Fairy < mw.Max_Fairy)
             {
                 mw.Fairy++;
                 mw.RefreshUI();
@@ -96,7 +96,7 @@ namespace WpfApplication1
 
         private void plusCrown_Click(object sender, EventArgs e)
         {
-            if (mw.Crown < 10)
+            if (mw.Crown < mw.Max_Crown)
             {
 				mw.Crown++;
                 mw.RefreshUI();
@@ -114,7 +114,7 @@ namespace WpfApplication1
 
         private void plusKey_Click(object sender, EventArgs e)
         {
-            if (mw.BossKey < 8)
+            if (mw.BossKey < mw.Max_BossKey)
             {
 				mw.BossKey++;
                 mw.RefreshUI();
@@ -132,7 +132,7 @@ namespace WpfApplication1
 
         private void plusN64Coin_Click(object sender, EventArgs e)
         {
-            if (mw.N64Coin < 1)
+            if (mw.N64Coin < mw.Max_N64Coin)
             {
                 mw.N64Coin++;
                 mw.RefreshUI();
@@ -150,7 +150,7 @@ namespace WpfApplication1
 
         private void plusRWCoin_Click(object sender, EventArgs e)
         {
-            if (mw.RWCoin < 1)
+            if (mw.RWCoin < mw.Max_RWCoin)
             {
 				mw.RWCoin++;
                 mw.RefreshUI();
@@ -174,9 +174,8 @@ namespace WpfApplication1
 
 		private void btnToggleN64Coin_Click(object sender, EventArgs e) {
 			if (mw.N64Coin == 0) {
-				mw.N64Coin = 1;
-			}
-			else {
+				mw.N64Coin = mw.Max_N64Coin;
+			} else {
 				mw.N64Coin = 0;
 			}
 			btnToggleN64Coin.ImageIndex = mw.N64Coin;
@@ -185,9 +184,8 @@ namespace WpfApplication1
 
 		private void btnToggleRWCoin_Click(object sender, EventArgs e) {
 			if (mw.RWCoin == 0) {
-				mw.RWCoin = 1;
-			}
-			else {
+				mw.RWCoin = mw.Max_RWCoin;
+			} else {
 				mw.RWCoin = 0;
 			}
 			btnToggleRWCoin.ImageIndex = mw.RWCoin;

@@ -4,6 +4,8 @@
         Title="DK64 101% Counter" WindowStyle="None" Height="229" Width="578" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Window.ContextMenu>
         <ContextMenu>
+			<MenuItem Name="PickFont" Header="Font..." Click="PickFont_Click" />
+			<Separator/>
             <MenuItem Name="ShowWindow" Header="Show Increment Window" Click="ShowWindow_Click"/>
             <MenuItem Name="PercentInfo" Header="Percentage Information" Click="PercentInfo_Click"/>
             <Separator/>
@@ -14,26 +16,19 @@
 		<Image HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="10,10,0,0" Source="{StaticResource GB}"/>
 		<Image HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="59" Margin="218,17,0,0" Source="{StaticResource Blueprint}"/>
 		<Image HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="218,79,0,0" Source="{StaticResource Crown}"/>
-		<Image HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="402,10,0,0" Source="{StaticResource Medal}" />
+		<Image HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="422,10,0,0" Source="{StaticResource Medal}" />
 		<Image HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="22,79,0,0" Source="{StaticResource Fairy}" />
-		<Image HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="409,79,0,0" Source="{StaticResource Key}"/>
-		<Image x:Name="n64CoinImage" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="10,145,0,0" Source="{StaticResource N64Coin_greyed}" />
-		<Image x:Name="rwCoinImage" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="84,145,0,0" Source="{StaticResource RarewareCoin_greyed}" />
-        <TextBlock HorizontalAlignment="Left" Margin="130,28,0,0" TextWrapping="Wrap" Text="/201" VerticalAlignment="Top" Height="53" Width="74" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="507,28,0,0" TextWrapping="Wrap" Text="/40" VerticalAlignment="Top" Height="37" Width="53" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="319,28,0,0" TextWrapping="Wrap" Text="/40" VerticalAlignment="Top" Height="37" Width="53" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="130,92,0,0" TextWrapping="Wrap" Text="/20" VerticalAlignment="Top" Height="37" Width="53" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="319,92,0,0" TextWrapping="Wrap" Text="/10" VerticalAlignment="Top" Height="37" Width="53" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="507,92,0,0" TextWrapping="Wrap" Text="/8" VerticalAlignment="Top" Height="37" Width="36" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-		<TextBlock HorizontalAlignment="Left" Margin="499,149,0,0" TextWrapping="Wrap" Text="%" VerticalAlignment="Top" Height="53" Width="44" Foreground="White" FontFamily="Arial" FontSize="48" FontWeight="Bold"/>
+		<Image HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="431,79,0,0" Source="{StaticResource Key}"/>
+		<Image x:Name="n64CoinImage" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="10,155,0,0" Source="{StaticResource N64Coin_greyed}" />
+		<Image x:Name="rwCoinImage" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="79,155,0,0" Source="{StaticResource RarewareCoin_greyed}" />
 
-        <TextBlock x:Name="numGB" HorizontalAlignment="Left" TextAlignment="Right" Margin="67,28,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="53" Width="62" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock x:Name="numMedal" HorizontalAlignment="Left" TextAlignment="Right" Margin="460,28,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="53" Width="45" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock x:Name="numBP" HorizontalAlignment="Left" TextAlignment="Right" Margin="274,28,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="53" Width="45" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock x:Name="numFairy" HorizontalAlignment="Left" TextAlignment="Right" Margin="84,92,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="53" Width="45" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock x:Name="numCrown" HorizontalAlignment="Left" TextAlignment="Right" Margin="274,92,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="53" Width="45" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-        <TextBlock x:Name="numKey" HorizontalAlignment="Left" TextAlignment="Right" Margin="486,92,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="53" Width="19" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
-		<TextBlock x:Name="numPercent" HorizontalAlignment="Left" TextAlignment="Right" Margin="409,149,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="53" Width="85" Foreground="White" FontFamily="Arial" FontSize="48" FontWeight="Bold"/>
+		<TextBlock x:Name="numGB" HorizontalAlignment="Left" TextAlignment="Right" Margin="64,28,0,0" TextWrapping="Wrap" Text="0/201" VerticalAlignment="Top" Height="50" Width="128" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
+        <TextBlock x:Name="numMedal" HorizontalAlignment="Left" TextAlignment="Right" Margin="440,28,0,0" TextWrapping="Wrap" Text="0/40" VerticalAlignment="Top" Height="50" Width="128" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
+        <TextBlock x:Name="numBP" HorizontalAlignment="Left" TextAlignment="Right" Margin="270,28,0,0" TextWrapping="Wrap" Text="0/40" VerticalAlignment="Top" Height="50" Width="128" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
+        <TextBlock x:Name="numFairy" HorizontalAlignment="Left" TextAlignment="Right" Margin="64,92,0,0" TextWrapping="Wrap" Text="0/20" VerticalAlignment="Top" Height="50" Width="128" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
+        <TextBlock x:Name="numCrown" HorizontalAlignment="Left" TextAlignment="Right" Margin="270,92,0,0" TextWrapping="Wrap" Text="0/10" VerticalAlignment="Top" Height="50" Width="128" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
+        <TextBlock x:Name="numKey" HorizontalAlignment="Left" TextAlignment="Right" Margin="440,92,0,0" TextWrapping="Wrap" Text="0/8" VerticalAlignment="Top" Height="50" Width="128" Foreground="#FFC1AD66" FontFamily="Arial" FontSize="36"/>
+		<TextBlock x:Name="numPercent" HorizontalAlignment="Left" TextAlignment="Right" Margin="440,155,0,0" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top" Height="64" Width="128" Foreground="White" FontFamily="Arial" FontSize="48" FontWeight="Bold"/>
 
     </Grid>
 </Window>
