@@ -34,10 +34,13 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+		private void Window_Loaded(object sender, RoutedEventArgs e) {
 			IncrementWindow iw = new IncrementWindow(this);
 			iw.Show();
 			iw.BringToFront();
-        }
+		}
 
 		private void CalcPercent() {
 			actualPercent = Convert.ToDecimal((GB * 0.4) + (Medal * 0.2) + (Fairy * 0.2) + (Crown * 0.5) + (BossKey * 0.25) + (N64Coin * 0.5) + (RWCoin * 0.5));
@@ -97,7 +100,5 @@ namespace WpfApplication1
         {
             Application.Current.Shutdown();
         }
-
-
     }
 }
